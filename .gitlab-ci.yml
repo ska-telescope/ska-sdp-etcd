@@ -4,32 +4,24 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
 stages:
-- lint
-- test
-- scan
-- build
-- publish
-- pages
+  - lint
+  - test
+  - build
+  - publish
+  - scan
+  - pages
 
 include:
-  # Python lint, scan, build and publish jobs
+  # For Python, only include linting and testing stages
   - project: 'ska-telescope/templates-repository'
     file: 'gitlab-ci/includes/python-lint.gitlab-ci.yml'
   - project: 'ska-telescope/templates-repository'
-    file: 'gitlab-ci/includes/python-scan.gitlab-ci.yml'
+    file: 'gitlab-ci/includes/python-test.gitlab-ci.yml'
   - project: 'ska-telescope/templates-repository'
-    file: 'gitlab-ci/includes/python-build.gitlab-ci.yml'
-  - project: 'ska-telescope/templates-repository'
-    file: 'gitlab-ci/includes/python-publish.gitlab-ci.yml'
-
-  # Documentation jobs
+    file: 'gitlab-ci/includes/oci-image.gitlab-ci.yml'
   - project: 'ska-telescope/templates-repository'
     file: 'gitlab-ci/includes/docs.gitlab-ci.yml'
-
-  # Tag-based release management jobs
   - project: 'ska-telescope/templates-repository'
     file: 'gitlab-ci/includes/release.gitlab-ci.yml'
-
-  # Finaliser job
   - project: 'ska-telescope/templates-repository'
     file: 'gitlab-ci/includes/finaliser.gitlab-ci.yml'
