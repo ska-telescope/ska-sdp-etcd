@@ -50,9 +50,9 @@ with open("../../.release", "r") as fh:
     VERSION = fh.readline().rstrip().split("=")[-1]
 
 # The short X.Y.Z version.
-version = VERSION
+version = '1.0.0'
 # The full version, including alpha/beta/rc pre-release tags.
-release = VERSION
+release = '1.0.0'
 
 # -- General configuration ------------------------------------------------
 
