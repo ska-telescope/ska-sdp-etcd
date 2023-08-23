@@ -1,8 +1,10 @@
-# ska-sdp-etcd
+# SDP ETCD Wait Pod
 
-Etcd is the highly available key-value database underpinning the configuration library. In order to deploy the sdp we need a lightweight image with basic commands like `sleep` but also etcd commands like `etcdctl`. 
+Etcd is the highly available key-value database underpinning the configuration library. 
+In order to deploy the sdp we need a lightweight image with basic commands like `sleep` but also etcd commands like `etcdctl`. 
 
-This repository contains the dockerfile to build a busybox image with specific binaries for etcd commands installed on top.
+This repository contains the dockerfile to build a busybox image with specific binaries 
+for etcd commands installed on top.
 
 
 ## Standard CI machinery
@@ -36,3 +38,16 @@ make python-lint
 
 The linting job in the CI pipeline does the same checks, and it will fail if
 the code does not pass all of them.
+
+## Creating a new release
+
+When you are ready to make a new release:
+
+  - Check out the master branch
+  - Create an issue in the [Release Management](https://jira.skatelescope.org/projects/REL/summary) project
+  - Update the version number in `.release` with
+    - `make bump-patch-release`,
+    - `make bump-minor-release`, or
+    - `make bump-major-release`
+  - Create the git tag with `make git-create-tag`
+  - Push the changes with `make git-push-tag`
