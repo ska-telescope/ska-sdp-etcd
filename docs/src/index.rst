@@ -1,14 +1,9 @@
-ska-sdp-etcd
-=========================
+SDP etcd OCI image
+==================
 
-Etcd is the highly available key-value database underpinning the configuration library. In order to deploy the sdp we
-need a lightweight image with basic commands like `sleep` but also etcd commands like `etcdctl`.
+Etcd is the highly available key-value database underpinning the SDP
+configuration library. In order to deploy the SDP we need a lightweight OCI
+image containing the etcd binaries and basic commands like sleep.
 
-This repository contains the dockerfile to build a busybox image with specific binaries for etcd commands installed on top.
-
-Indices and tables
-------------------
-
-- :ref:`genindex`
-- :ref:`modindex`
-
+This repository contains a Dockerfile to build an image based on BusyBox with
+the etcd binaries installed on top.
