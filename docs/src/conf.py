@@ -18,11 +18,6 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 
-autodoc_mock_imports = [
-    "ska_sdp_config",
-    "ska_ser_logging",
-]
-
 import os
 import sys
 
@@ -39,15 +34,9 @@ def setup(app):
 
 # -- Project information -----------------------------------------------------
 project = "ska-sdp-etcd"
-copyright = "2019-2022, SKA SDP Developers"
+copyright = "2023-2024 SKA SDP Developers"
 author = "SKA SDP Developers"
 
-
-# The version info for the project you're documenting, acts as replacement for
-# |version| and |release|, also used in various other places throughout the
-# built documents.
-with open("../../.release", "r") as fh:
-    VERSION = fh.readline().rstrip().split("=")[-1]
 
 # The short X.Y.Z version.
 version = '3.5.12'
@@ -73,7 +62,6 @@ extensions = [
     "sphinx.ext.ifconfig",
     "sphinx.ext.viewcode",
     "sphinx.ext.githubpages",
-    "m2r2",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
