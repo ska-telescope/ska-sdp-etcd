@@ -39,9 +39,9 @@ author = "SKA SDP Developers"
 
 
 # The short X.Y.Z version.
-version = '3.5.12'
+version = '3.5.15'
 # The full version, including alpha/beta/rc pre-release tags.
-release = '3.5.12'
+release = '3.5.15'
 
 # -- General configuration ------------------------------------------------
 

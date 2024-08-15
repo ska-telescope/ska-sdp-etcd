@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ska-sdp-etcd"
-version = "3.5.12"
+version = "3.5.15"
 description = "SKA SDP etcd Image"
 authors = ["SKA SDP Developers"]
 license = "BSB-3-Clause"
