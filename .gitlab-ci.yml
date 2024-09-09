@@ -1,6 +1,5 @@
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  CI_POETRY_VERSION: ~1.8
 
 stages:
   - lint
@@ -12,10 +11,8 @@ stages:
 
 include:
   - project: 'ska-telescope/templates-repository'
-    file: 'gitlab-ci/includes/oci-image.gitlab-ci.yml'
-  - project: 'ska-telescope/templates-repository'
-    file: 'gitlab-ci/includes/docs.gitlab-ci.yml'
-  - project: 'ska-telescope/templates-repository'
-    file: 'gitlab-ci/includes/release.gitlab-ci.yml'
-  - project: 'ska-telescope/templates-repository'
-    file: 'gitlab-ci/includes/finaliser.gitlab-ci.yml'
+    file:
+      - 'gitlab-ci/includes/oci-image.gitlab-ci.yml'
+      - 'gitlab-ci/includes/docs.gitlab-ci.yml'
+      - 'gitlab-ci/includes/release.gitlab-ci.yml'
+      - 'gitlab-ci/includes/finaliser.gitlab-ci.yml'
