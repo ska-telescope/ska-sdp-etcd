@@ -1,5 +1,5 @@
-SDP etcd OCI image
-==================
+SDP etcd Image
+==============
 
 Etcd is the highly available key-value database underpinning the SDP
 configuration library. In order to deploy the SDP we need a lightweight OCI
