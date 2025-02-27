@@ -1,6 +1,6 @@
 FROM busybox:stable
 
-ENV ETCD_VERSION=3.5.15
+ENV ETCD_VERSION=3.5.18
 ENV DOWNLOAD_URL=https://github.com/etcd-io/etcd/releases/download
 
 RUN wget -O etcd.tar.gz ${DOWNLOAD_URL}/v${ETCD_VERSION}/etcd-v${ETCD_VERSION}-linux-amd64.tar.gz && \
