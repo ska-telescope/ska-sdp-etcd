@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.5.21
+
+- Update etcd to 3.5.21.
+
 ## 3.5.15
 
 - Update etcd to 3.5.15.
