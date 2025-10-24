@@ -9,7 +9,7 @@
 project = "SDP etcd Image"
 copyright = "2023-2025 SKA SDP Developers"
 author = "SKA SDP Developers"
-release = "3.5.15"
+release = "3.5.26"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
