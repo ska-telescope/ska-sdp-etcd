@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "SDP etcd Image"
-copyright = "2023-2025 SKA SDP Developers"
+copyright = "2023-2026 SKA SDP Developers"
 author = "SKA SDP Developers"
 release = "3.5.26"
 
