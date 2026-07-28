@@ -16,3 +16,9 @@ include:
       - 'gitlab-ci/includes/docs.gitlab-ci.yml'
       - 'gitlab-ci/includes/release.gitlab-ci.yml'
       - 'gitlab-ci/includes/finaliser.gitlab-ci.yml'
+
+oci-image-build:
+  variables:
+    OCI_TARGET_PLATFORMS: --platform linux/amd64,linux/arm64
+  tags:
+    - ska-buildx
