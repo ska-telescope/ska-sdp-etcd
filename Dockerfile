@@ -1,4 +1,4 @@
-FROM busybox:stable
+FROM busybox:1.38
 
 ARG DOWNLOAD_URL=https://github.com/etcd-io/etcd/releases/download
 ARG ETCD_VERSION=3.5.31
