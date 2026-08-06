@@ -1,7 +1,7 @@
 FROM artefact.skao.int/ska-build-python:1.0.0 AS build
 
 ARG DOWNLOAD_URL=https://github.com/etcd-io/etcd/releases/download
-ARG ETCD_VERSION=3.5.31
+ARG ETCD_VERSION=3.5.21
 ARG TARGETARCH
 
 WORKDIR /build
