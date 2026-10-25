@@ -1,5 +1,8 @@
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
+  POETRY_CONFIG_VIRTUALENVS_CREATE: true
+  POETRY_CONFIG_VIRTUALENVS_IN_PROJECT: false
+  PYTHON_VERSION: python3.14
 
 stages:
   - lint
@@ -16,6 +19,15 @@ include:
       - 'gitlab-ci/includes/docs.gitlab-ci.yml'
       - 'gitlab-ci/includes/release.gitlab-ci.yml'
       - 'gitlab-ci/includes/finaliser.gitlab-ci.yml'
+
+docs-build:
+  before_script:
+    - poetry config virtualenvs.create $POETRY_CONFIG_VIRTUALENVS_CREATE
+    - poetry config virtualenvs.in-project $POETRY_CONFIG_VIRTUALENVS_IN_PROJECT
+    - poetry env use $PYTHON_VERSION
+    - time poetry sync --no-root --only docs
+  script:
+    - poetry run make docs-build $CI_SPHINX_BUILDERS
 
 oci-image-build:
   variables:
