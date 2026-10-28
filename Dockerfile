@@ -1,4 +1,4 @@
-FROM artefact.skao.int/ska-build-python:1.0.0 AS build
+FROM artefact.skao.int/ska-build-python-ubuntu26:1.1.4 AS build
 
 ARG DOWNLOAD_URL=https://github.com/etcd-io/etcd/releases/download
 ARG ETCD_VERSION=3.5.21
