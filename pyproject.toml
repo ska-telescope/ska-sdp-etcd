@@ -1,6 +1,6 @@
 [project]
 name = "ska-sdp-etcd"
-version = "3.5.21"
+version = "3.7.3"
 description = "SKA SDP etcd Image"
 authors = [{name = "SKA SDP Developers"}]
 license = "BSB-3-Clause"
